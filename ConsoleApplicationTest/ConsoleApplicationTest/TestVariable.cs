@@ -35,6 +35,30 @@ namespace ConsoleApplicationTest
 
             return a.ToString();
         }
+
+        public string UpdateClassB(TestA a)
+        {
+            a.i = 4;
+            a.Name = "D";
+
+            a = new TestA();
+            a.i = 5;
+            a.Name = "E";
+
+            return a.ToString();
+        }
+
+        public string UpdateClassC(ref TestA a)
+        {
+            a.i = 6;
+            a.Name = "F";
+
+            a = new TestA();
+            a.i = 7;
+            a.Name = "G";
+
+            return a.ToString();
+        }
     }
 
     class TestA

@@ -55,6 +55,12 @@ namespace ConsoleApplicationTest
             tv.UpdateClassA(myA);
             Console.WriteLine(myA.ToString());
 
+            Console.WriteLine(tv.UpdateClassB(myA));
+            Console.WriteLine(myA.ToString());
+
+            Console.WriteLine(tv.UpdateClassC(ref myA));
+            Console.WriteLine(myA.ToString());
+
             Console.ReadLine();
         }
     }
