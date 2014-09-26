@@ -62,57 +62,76 @@ namespace ConsoleApplicationTest
             //Console.WriteLine(tv.UpdateClassC(ref myA));
             //Console.WriteLine(myA.ToString());
 
-            string doubleMax = double.MaxValue.ToString();
-            Console.WriteLine(doubleMax);
+            //#region DoubleMax
 
-            Regex regex = new Regex(@"(\d*.\d*)E([+ -]?\d*)");
-            string p = regex.Replace(doubleMax, "$1");
-            Console.WriteLine(p);
+            //string doubleMax = double.MaxValue.ToString();
+            //Console.WriteLine(doubleMax);
 
-            p = Convert.ToString((double.Parse(p) + 0.1));
-            Console.WriteLine(p);
+            //Regex regex = new Regex(@"(\d*.\d*)E([+ -]?\d*)");
+            //string p = regex.Replace(doubleMax, "$1");
+            //Console.WriteLine(p);
 
-            Console.WriteLine(regex.Replace(doubleMax, "$2"));
+            //p = Convert.ToString((double.Parse(p) + 0.1));
+            //Console.WriteLine(p);
 
-            doubleMax = p + "E" + regex.Replace(doubleMax, "$2");
+            //Console.WriteLine(regex.Replace(doubleMax, "$2"));
 
-            try
-            {
-                Console.WriteLine(double.Parse(doubleMax));
-            }
-            catch (Exception ex)
-            {
+            //doubleMax = p + "E" + regex.Replace(doubleMax, "$2");
 
-                Console.WriteLine(ex.Message);
-            }
+            //try
+            //{
+            //    Console.WriteLine(double.Parse(doubleMax));
+            //}
+            //catch (Exception ex)
+            //{
 
-            Console.WriteLine("---");
-            Console.WriteLine(decimal.MaxValue);
-            Console.WriteLine("---");
+            //    Console.WriteLine(ex.Message);
+            //}
 
-            try
-            {
-                Console.WriteLine(double.Parse(decimal.MaxValue.ToString()));
-            }
-            catch (Exception ex)
-            {
+            //Console.WriteLine("---");
+            //Console.WriteLine(decimal.MaxValue);
+            //Console.WriteLine("---");
 
-                Console.WriteLine(ex.Message);
-            }
-            Console.WriteLine("===");
+            //try
+            //{
+            //    Console.WriteLine(double.Parse(decimal.MaxValue.ToString()));
+            //}
+            //catch (Exception ex)
+            //{
 
-            string doubleMax1 = (double.MaxValue + long.MaxValue).ToString();
-            Console.WriteLine(doubleMax1);
+            //    Console.WriteLine(ex.Message);
+            //}
+            //Console.WriteLine("===");
+
+            //string doubleMax1 = (double.MaxValue + long.MaxValue).ToString();
+            //Console.WriteLine(doubleMax1);
 
 
 
-            string doubleMin = double.MinValue.ToString();
-            Console.WriteLine(doubleMin);
+            //string doubleMin = double.MinValue.ToString();
+            //Console.WriteLine(doubleMin);
 
-            string longMax = long.MaxValue.ToString();
-            Console.WriteLine(longMax);
+            //string longMax = long.MaxValue.ToString();
+            //Console.WriteLine(longMax);
+            //#endregion
+
+
+            //MyLog mylog = new MyLog();
+            //mylog.Log("hello world");
+
+            //mylog.Log("hello china");
+            //Console.ReadLine();
+
+            string filePath = @"d:\Code\TFS_Projects\QSTeam\EWSJSAutomation\Microsoft.Support.UnifiedDesktop.Library.Automations.JSInjection\Steps\JsInjectionSteps.cs";
+
+            Console.WriteLine(FilePathRoute.GetPartFromFilePath(filePath, RouteType.FileName));
+            Console.WriteLine(FilePathRoute.GetPartFromFilePath(filePath, RouteType.FileSuffix));
+            Console.WriteLine(FilePathRoute.GetPartFromFilePath(filePath, RouteType.NameOnly));
+            Console.WriteLine(FilePathRoute.GetPartFromFilePath(filePath, RouteType.PathExceptName));
+            Console.WriteLine(FilePathRoute.GetPartFromFilePath(filePath, RouteType.PathExceptSuffix));
 
             Console.ReadLine();
         }
+
     }
 }
