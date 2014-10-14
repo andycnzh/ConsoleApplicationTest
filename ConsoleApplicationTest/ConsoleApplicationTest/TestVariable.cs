@@ -72,7 +72,7 @@ namespace ConsoleApplicationTest
             Name = "A";
         }
 
-        public string ToString()
+        public new string ToString()
         {
             return i.ToString() + Name;
         }
